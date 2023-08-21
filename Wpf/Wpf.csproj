@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="delete.png" />
+    <None Remove="edit.png" />
+    <None Remove="Image\delete.png" />
+    <None Remove="Image\edit.png" />
+    <None Remove="Image\free-icon-computer-4249283.png" />
+    <None Remove="Image\icon-plus-2549959.png" />
+    <Reference Include="System.Data.SqlClient" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="delete.png" />
+    <Resource Include="edit.png" />
+    <Resource Include="Image\delete.png" />
+    <Resource Include="Image\edit.png" />
+    <Resource Include="Image\free-icon-computer-4249283.png" />
+    <Resource Include="Image\icon-plus-2549959.png" />
+  </ItemGroup>
+
+</Project>

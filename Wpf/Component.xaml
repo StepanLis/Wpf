@@ -1,0 +1,61 @@
+﻿<Window x:Class="Wpf.Component"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf"
+        mc:Ignorable="d"
+        Title="Component" Height="450" Width="800">
+    <StackPanel>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <DataGrid AutoGenerateColumns="False" Margin="10" x:Name="ComponentDataGrid"
+                              FontSize="16" IsReadOnly="True" ColumnWidth="*" Grid.Column="0">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Width="auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <!--<Button Height="25" Width="25"
+                                                    Background="Transparent"
+                                                    BorderThickness="0">
+                                    <Image Width="auto" Source="/edit.png"/>
+                                </Button>-->
+                                    <Button x:Name="del_button_com" Click="del_button_Click_com" Height="25" Width="25"
+                                                    Background="Transparent"
+                                                    BorderThickness="0">
+                                        <Image Width="auto" Source="/delete.png"/>
+                                    </Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Название компонента" Binding="{Binding Path=Id}"/>
+                    <DataGridTextColumn Header="Количество" Binding="{Binding Path=Quantity}"/>
+
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+        </Grid>
+        <StackPanel Orientation="Horizontal">
+            <ComboBox FontFamily="Arial Regular" Height="25px" Margin="10 0 10 5" FontSize="15" x:Name="componentComboBox" IsEditable="True" 
+              Text="Выберите компонент" 
+              ItemsSource="{Binding Components}" DisplayMemberPath="Name_component"
+              TextSearch.TextPath="Name_component" />
+            <TextBlock FontSize="15" FontFamily="Arial Regular" Height="25px" Margin="0 15" Text="Введите количество:"></TextBlock>
+            <TextBox x:Name="quantityTextBox" FontSize="15" FontFamily="Arial Regular" Height="25px" Width="50" Margin="0 10"/>
+            <Button x:Name="AddButton_Component" Margin="10 0 0 0" Height="70" Width="70"
+                            Background="Transparent"
+                            BorderThickness="0" Click="AddButton_clickComponent_Click">
+                <Image Source="/Image/icon-plus-2549959.png" />
+            </Button>
+        </StackPanel>
+
+    </StackPanel>
+</Window>

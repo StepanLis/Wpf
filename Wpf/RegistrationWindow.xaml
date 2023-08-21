@@ -1,0 +1,28 @@
+﻿<Window x:Class="Wpf.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Height="500" Width="500">
+    <Grid Background="#378BA4">
+        <TextBlock  FontFamily="Arial Black" Foreground="#036280" FontSize="40px" HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" Margin="10"> Регистрация</TextBlock>
+        <StackPanel Background="#036280" Margin="30,80,30,60">
+            <Label Content="Логин" FontSize="25" Foreground="#4dc4e8" FontFamily="Arial Regular"></Label>
+            <TextBox x:Name="text" Height="25px" Margin="10 0 10 5" FontSize="15" FontFamily="Arial Regular"></TextBox>
+
+            <Label Content="Пароль" FontSize="25" Foreground="#4dc4e8" FontFamily="Arial Regular"></Label>
+            <PasswordBox x:Name="passwordBox" Height="25px" Margin="10 0 10 5" FontSize="15" ></PasswordBox>
+
+            <Label Content="Повторите пароль" FontSize="25" Foreground="#4dc4e8" FontFamily="Arial Regular"></Label>
+            <PasswordBox x:Name="password_copy" Height="25px" Margin="10 0 10 5" FontSize="15" ></PasswordBox>
+
+            <Button x:Name="registrationEndButton"  Content="Установить" Background="LightCyan" Margin="10 40 10 10" Foreground="#378BA4" 
+                    FontFamily="Arial Regular" FontSize="20" Click="registrationEndButton_Click"></Button>
+            <Button x:Name="cancelButton"  Content="Отмена" Background="LightCyan" Margin="10 10 10 25" Foreground="#378BA4" 
+                    FontFamily="Arial Regular" FontSize="20" Click="cancelButton_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

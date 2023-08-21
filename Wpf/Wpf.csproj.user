@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddComponentWarehouse.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditComponentWarehouse.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LisShopWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RegistrationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddComponentWarehouse.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditComponentWarehouse.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LisShopWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RegistrationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="Wpf.AddComponentWarehouse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf"
+        mc:Ignorable="d"
+        Title="AddComponentWarehouse" Height="500" Width="500">
+    <Grid Background="#378BA4">
+        <TextBlock  FontFamily="Arial Black" Foreground="#036280" FontSize="40px" HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" Margin="10"> Новый компонент</TextBlock>
+        <StackPanel Background="#036280" Margin="30,80,30,40">
+            <Label Content="Название" FontSize="25" Foreground="#4dc4e8" FontFamily="Arial Regular"></Label>
+            <TextBox x:Name="textComponent" Height="25px" Margin="10 0 10 5" FontSize="15" FontFamily="Arial Regular"></TextBox>
+
+            <Label Content="Количество" FontSize="25" Foreground="#4dc4e8" FontFamily="Arial Regular"></Label>
+            <TextBox Height="25px" Margin="10 0 10 5" FontSize="15" FontFamily="Arial Regular" x:Name="numberTextBox" PreviewTextInput="NumberTextBox_PreviewTextInput" />
+
+            <Label Content="Категория" FontSize="25" Foreground="#4dc4e8" FontFamily="Arial Regular"></Label>
+            <ComboBox FontFamily="Arial Regular" Height="25px" Margin="10 0 10 5" FontSize="15" x:Name="categoryComboBox" IsEditable="True" 
+                      Text="Выберите категорию" DropDownClosed="categoryComboBox_DropDownClosed"
+                      ItemsSource="{Binding Categories}" DisplayMemberPath="Name_category" />
+
+            <Button x:Name="registrationEndButton_component"  Content="Заказать" Background="LightCyan" Margin="10 40 10 10" Foreground="#378BA4" 
+                    FontFamily="Arial Regular" FontSize="20" Click="registrationEndButton_component_Click"></Button>
+            <Button x:Name="cancelButton_component"  Content="Отмена" Background="LightCyan" Margin="10 10 10 25" Foreground="#378BA4" 
+                    FontFamily="Arial Regular" FontSize="20" Click="cancelButton_component_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
